@@ -16,143 +16,166 @@ search: true
 
 CLEANSWEEP API DOCUMENTATION
 
-# Authentication
+# Retrieve Listings
 
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
+> REQUEST:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+
+{
+  "email": "sweepdevel@gmail.com",
+  "api_key": "1X749576E1",
+  "password": "tigerbright99"
+}
 ```
 
-This endpoint retrieves all kittens.
+> RESPONSE:
+
+```json
+
+{
+  "0": {
+    "_id": {
+      "$id": "580d2522abb5d4d16d18d43c"
+    },
+    "FromEMail": "sweepdevel@gmail.com",
+    "Privacy": "1",
+    "contact_phone_ok": "1",
+    "contact_text_ok": "1",
+    "contact_phone": null,
+    "contact_name": "Test User",
+    "PostingTitle": "Timex Watch",
+    "Ask": "20",
+    "price": "20",
+    "GeographicArea": "\nNew Delhi 110092\nDelhi\nIndia",
+    "postal_code": "110092",
+    "PostingBody": "Timex Watch for sale only 20 dollars",
+    "sale_condition": "excellent",
+    "see_my_other": "1",
+    "sale_manufacturer": "",
+    "sale_model": "",
+    "sale_size": "",
+    "wantamap": "",
+    "xstreet0": "",
+    "xstreet1": "",
+    "city": "",
+    "region": null,
+    "postal": null,
+    "contact_ok": null,
+    "created": "2016-10-23 17:01:22",
+    "modified": "2016-10-23 17:01:22",
+    "posted": "2016-10-23 17:01:22",
+    "fingerprint": "CleansweepMobile_52ECC847-6CE1-4EA3-B698-A2140C81F995:987347301007",
+    "posting_id": 284,
+    "post_status": "DELETE",
+    "latitude": 0,
+    "longitude": 0,
+    "images": [
+      "http://km.cleansweep.me/imagecache/284.jpg"
+    ],
+    "videos": []
+  },
+  "1": {
+    "_id": {
+      "$id": "581100a0abb5d4450b9f44c1"
+    },
+    "FromEMail": "sweepdevel@gmail.com",
+    "Privacy": "1",
+    "contact_phone_ok": "1",
+    "contact_text_ok": "1",
+    "contact_phone": null,
+    "contact_name": "Test User",
+    "PostingTitle": "black android one case",
+    "Ask": "200",
+    "price": "200",
+    "GeographicArea": "\nNew Delhi 110092\nDelhi\nIndia",
+    "postal_code": "110092",
+    "PostingBody": "Android phone for sale only $200. ",
+    "sale_condition": "new",
+    "see_my_other": "1",
+    "sale_manufacturer": "",
+    "sale_model": "",
+    "sale_size": "",
+    "wantamap": "",
+    "xstreet0": "",
+    "xstreet1": "",
+    "city": "del",
+    "city_code": "del",
+    "region": null,
+    "postal": null,
+    "contact_ok": null,
+    "created": "2016-10-26 15:14:40",
+    "modified": "2016-10-26 15:14:40",
+    "posted": "2016-10-26 15:14:40",
+    "fingerprint": "CleansweepMobile_373C628A-7DC0-4BBB-9235-21A0946EE4BA:4002429843455",
+    "posting_id": 297,
+    "post_status": "PENDING",
+    "latitude": 28.635813087151,
+    "longitude": 77.312304151869,
+    "images": [
+      "http://km.cleansweep.me/imagecache/297.jpg"
+    ],
+    "sounds": [
+      "http://km.cleansweep.me/audiocache/297.wav"
+    ],
+    "videos": [
+      "http://km.cleansweep.me/videocache/297.mp4"
+    ]
+  },
+  "status": "OK"
+}
+```
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`POST http://cleansweep.kimmccann.net/services/postings`
 
-### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
 
-## Get a Specific Kitten
+# Register Device
 
-```ruby
-require 'kittn'
+### HTTP Request
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+`POST http://cleansweep.kimmccann.net/services/register-device`
+
+>REQUEST:
+
+```json
+{
+  "email": "sweepdevel@gmail.com",
+  "deviceid": "CleansweepMobile_412616C6-B887-4BDC-AE29-3B0F4B1F736B",
+  "api_key": "1X749576E1",
+  "apnid": "a2c8d0fae90c773ae2d868bda68c15943a7b6ff3b5ecf7777c762c5597cd8b38"
+}
+
+```
+>RESPONSE:
+
+```json
+{
+  "status": "OK",
+  "message": "device registered: CleansweepMobile_412616C6-B887-4BDC-AE29-3B0F4B1F736B",
+  "devices": [
+    {
+      "_id": {
+        "$id": "581b372cec82219bd9d2699c"
+      },
+      "deviceid": "CleansweepMobile_412616C6-B887-4BDC-AE29-3B0F4B1F736B",
+      "apnid": "a2c8d0fae90c773ae2d868bda68c15943a7b6ff3b5ecf7777c762c5597cd8b38",
+      "email": "sweepdevel@gmail.com",
+      "modified": "2016-11-08 08:29:51"
+    }
+  ]
+}
 ```
 
-```python
-import kittn
+This endpoint registers the device on the server with the device's apn id for sending Push Notifications.
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
 
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
+# Fetch Cities and City codes
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
+> REQUEST:
 
 ```json
 {
@@ -164,16 +187,102 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific kitten.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+> RESPONSE:
+
+```json
+{
+  "cities": [
+    {
+      "code": "abz",
+      "city": "aberdeen",
+      "region": "gb",
+      "country": "gb"
+    },
+    {
+      "code": "abi",
+      "city": "abilene",
+      "region": "tx",
+      "country": "us"
+    },
+    {
+      "code": "aca",
+      "city": "acapulco",
+      "region": "mx",
+      "country": "mx"
+    },
+    {
+      "code": "adl",
+      "city": "adelaide",
+      "region": "sa",
+      "country": "au"
+    },
+    {
+      "code": "amd",
+      "city": "ahmedabad",
+      "region": "in",
+      "country": "in"
+    },
+    {
+      "code": "cak",
+      "city": "akron-canton",
+      "region": "oh",
+      "country": "us"
+    },
+    {
+      "code": "aby",
+      "city": "albany",
+      "region": "ga",
+      "country": "us"
+    },
+    {
+      "code": "alb",
+      "city": "albany",
+      "region": "ny",
+      "country": "us"
+    }
+  ],
+  "status": "OK"
+}
+```
+
+This endpoint retrieves all the cities and the city codes required for Craigslist.
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`POST http://cleansweep.kimmccann.net/services/cities`
 
-### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+
+
+# Status update for peerid
+
+> REQUEST:
+
+```json
+{
+  "peerid": "CleansweepMobile_412616C6-B887-4BDC-AE29-3B0F4B1F736B",
+  "status": "ready",
+  "latitude": 28.63584879322782,
+  "api_key": "1X749576E1",
+  "longitude": 77.31228215627122,
+  "origin": null
+}
+```
+
+
+> RESPONSE:
+
+```json
+{
+  "status": "OK",
+  "message": "",
+  "peers": []
+}
+```
+
+This endpoint updates the status for a peer on server.
+
+### HTTP Request
+
+`POST http://cleansweep.kimmccann.net/services/peerid`
