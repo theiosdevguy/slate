@@ -383,6 +383,267 @@
 
 <p><code class="prettyprint">POST http://cleansweep.kimmccann.net/services/peerid</code></p>
 
+<h1 id="post-a-listing">Post a Listing</h1>
+
+<blockquote>
+<p>REQUEST:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Booklet only for $20 or best offer"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"section"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fso"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"apnid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a2c8d0fae90c773ae2d868bda68c15943a7b6ff3b5ecf7777c762c5597cd8b38"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fingerprint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CleansweepMobile_412616C6-B887-4BDC-AE29-3B0F4B1F736B:2830950571891"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1X749576E1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my nexa logo"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"149"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">77.3121782925931</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">28.63578659378167</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tigerbright99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"geoarea"</span><span class="p">:</span><span class="w"> </span><span class="s2">"\nNew Delhi 110092\nDelhi\nIndia"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reg"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110092"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sweepdevel@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test User"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sale_condition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>RESPONSE:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"mesage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Post successful"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"posting_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">305</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fingerprint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CleansweepMobile_412616C6-B887-4BDC-AE29-3B0F4B1F736B:2830950571891"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint posts a created listing to CleanSweep server.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://cleansweep.kimmccann.net/services/craigslist</code></p>
+
+<h1 id="add-media-for-a-listing">Add Media for a listing</h1>
+
+<blockquote>
+<p>REQUEST:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1X749576E1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fingerprint"</span><span class="p">:</span><span class="s2">"CleansweepMobile_A69AD0BF-63F5-41CC-8BD3-2EFA66A2D42C_1473425476"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data:image/jpeg;base64,/9j/sRv17x+ndWt6J1qa2VhnoZ2pEOaDtymj+V/hmf8AXF02M6pwOQ1wezYHVvHDmvEh7HfnNc1QDS27EgWOsdEF/pCzZxVU0tXtH73vY9r//"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>RESPONSE:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Upload successful"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"files_received"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"total_bytes"</span><span class="p">:</span><span class="w"> </span><span class="mi">509860</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fingerprint"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"posting_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">305</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://km.cleansweep.me/videocache/305.mp4"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"http://km.cleansweep.me/videocache/305.mp4"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint posts all the media data using a multipart form request.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://cleansweep.kimmccann.net/services/addmedia</code></p>
+
+<h1 id="push-notification">Push Notification</h1>
+
+<blockquote>
+<p>JSON payload:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"aps"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"alert"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"body"</span><span class="p">:</span><span class="s2">"There is an update to your posting"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"posting_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">286</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APPROVED"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"content-available"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"badge"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"sound"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h1 id="webrtc-messaging-payload">WebRTC messaging Payload</h1>
+
+<blockquote>
+<p>JSON payload:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">  
+   </span><span class="nt">"tag"</span><span class="p">:</span><span class="s2">"confirm"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"code"</span><span class="p">:</span><span class="s2">"please confirm listing"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"body"</span><span class="p">:{</span><span class="w">  
+      </span><span class="nt">"contact_name"</span><span class="p">:</span><span class="s2">"Christoper Columbus"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"latitude"</span><span class="p">:</span><span class="s2">"40.4168"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"longitude"</span><span class="p">:</span><span class="s2">"3.7038"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"country"</span><span class="p">:</span><span class="s2">"es"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"city_code"</span><span class="p">:</span><span class="s2">"mdd"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"section"</span><span class="p">:</span><span class="s2">"fso"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"category_id"</span><span class="p">:</span><span class="s2">"119"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"headline"</span><span class="p">:</span><span class="s2">"Spanish Galleon"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="s2">"Santa Maria for sale.  Excellent exploring ship. Price in spanish doubloons"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"price"</span><span class="p">:</span><span class="s2">"300"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"condition"</span><span class="p">:</span><span class="s2">"fair"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h1 id="get-listing-by-posting-id">Get Listing by Posting ID</h1>
+
+<blockquote>
+<p>REQUEST:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"api_key"</span><span class="p">:</span><span class="s2">"1X749576E1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="s2">"sweepdevel@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"password"</span><span class="p">:</span><span class="s2">"tigerbright99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"posting_id"</span><span class="p">:</span><span class="mi">297</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>RESPONSE:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"posting found"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"postings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"581100a0abb5d4450b9f44c1"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"FromEMail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sweepdevel@gmail.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Privacy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contact_phone_ok"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contact_text_ok"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contact_phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contact_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test User"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"PostingTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"black android one case"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"Ask"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"GeographicArea"</span><span class="p">:</span><span class="w"> </span><span class="s2">"\nNew Delhi 110092\nDelhi\nIndia"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110092"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"PostingBody"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Android phone for sale only $200. "</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"sale_condition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"see_my_other"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"sale_manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"sale_model"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"sale_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantamap"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"xstreet0"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"xstreet1"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"del"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"city_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"del"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"postal"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"contact_ok"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-26 15:14:40"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"modified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-26 15:14:40"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"posted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-26 15:14:40"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"fingerprint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CleansweepMobile_373C628A-7DC0-4BBB-9235-21A0946EE4BA:4002429843455"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"posting_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">297</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"post_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PENDING"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">28.635813087151</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">77.312304151869</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"http://km.cleansweep.me/imagecache/297.jpg"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"sounds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"http://km.cleansweep.me/audiocache/297.wav"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"http://km.cleansweep.me/videocache/297.mp4"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint finds a listing by a posting id.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://cleansweep.kimmccann.net/services/postbyid</code></p>
+
+<h1 id="create-connection-with-peerjs-server">Create connection with PeerJS server</h1>
+
+<p><code class="prettyprint">wss://cleansweep.kimmccann.net:3000/peerjs?key=peerjs&amp;id=CleansweepMobile_412616C6-B887-4BDC-AE29-3B0F4B1F736B&amp;token=gkquzvostitpphwnknuinzedmzreanyiyq</code></p>
+
+<blockquote>
+<p>RESPONSE:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"OPEN"</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>key</td>
+<td>peerjs</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Mobile device UDID</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Gerated by Peer Objective-C client</td>
+</tr>
+</tbody></table>
+
+<h1 id="register-for-cleansweep-account">Register for Cleansweep account</h1>
+
+<blockquote>
+<p>REQUEST:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+        </span><span class="nt">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1X749576E1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sweepdevel@gmail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tigerbright99"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"mobile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3065551212"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2405 Legislative Drive"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Regina"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SK"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"postalcode"</span><span class="p">:</span><span class="s2">"S4S 0B3"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"country"</span><span class="p">:</span><span class="s2">"Canada"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>RESPONSE:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="nt">"status"</span><span class="p">:</span><span class="s2">"OK"</span><span class="p">,</span><span class="nt">"mesage"</span><span class="p">:</span><span class="s2">"Register successful"</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint registers a new account on CleanSweep server.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://cleansweep.kimmccann.net/services/register</code></p>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
